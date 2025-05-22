@@ -6,11 +6,13 @@ import Login from './auth/Login'
 import Register from './auth/Register'
 import store from './redux/store'
 import App from './App'
+import Hero from './Components/Hero'
 
 
 const router = createBrowserRouter (
   createRoutesFromElements(
     <Route path="/" element={<App />}>
+      <Route path='/' element = {<Hero />} />
       <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} />
     </Route>
