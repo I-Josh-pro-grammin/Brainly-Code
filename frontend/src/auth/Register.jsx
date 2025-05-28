@@ -49,7 +49,7 @@ const Register = () => {
 
   return (
     <>
-    <div className='bg-bg1 text-white h-screen w-full bg-center pt-2 items-center bg-cover'>
+    <div className='bg-[#06022bf1] text-white h-screen w-full bg-center pt-2 items-center bg-cover'>
       <header>
         <div className="">
            <h1 className="text-center heading font-bold text-2xl font-fredoka">Create an Account</h1>

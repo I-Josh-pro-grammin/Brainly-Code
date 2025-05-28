@@ -17,15 +17,16 @@ const Hero = () => {
     { name: "Home", link: "/", icon: "🏠" },
     { name: "Courses", link: "/courses", icon: "📚" },
     { name: "Playground", link: "/playground", icon: "🎮" },
-    { name: "Challenges", link: "/challenges", icon: "🏆" }
+    { name: "Challenges", link: "/challenges", icon: "🏆" },
+    { name: "Users", link: "/admin/users", icon: "👤"}
   ];
 
   const [ logoutApiCall ] = useLogoutMutation();
   const logoutHandler = async () => {
     try {
       await logoutApiCall().unwrap();
-      dispatch(Logout);
-      navigate('login');
+      dispatch(Logout());
+      navigate('/login');
     } catch (error) {
       toast.error(error?.data?.message || error.message);
     }
@@ -39,9 +40,9 @@ const Hero = () => {
           <BrainlyCodeIcon className="ml-7"/>
           <ul className="ml-auto">
             <li className="font-semibold inline text-gray-300">
-              <button onClick={logoutHandler}>
-                <Link to="/login">Logout</Link>
-              </button>
+                <Link to="/login">
+                  <button onClick={logoutHandler}>Logout</button>
+                </Link>
             </li>
             <li className="font-semibold inline bg-gradient-to-r from-[#00ffff] rounded-md ml-5 to-purple-400 px-5 py-2 text-gray-300">
               <Link to="/register">Signup</Link>
