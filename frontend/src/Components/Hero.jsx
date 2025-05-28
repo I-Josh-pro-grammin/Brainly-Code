@@ -6,8 +6,8 @@ import { TextGenerateEffect } from "./ui/TextGenerate";
 import Loader from "./ui/Loader";
 import { useLogoutMutation } from "../redux/api/userSlice";
 import { useDispatch } from "react-redux";
-import { logout } from "../redux/Features/authSlice";
 import { toast } from "react-toastify";
+import { Logout } from "../redux/Features/authSlice";
 
 const Hero = () => {
   const dispatch = useDispatch();
@@ -24,7 +24,7 @@ const Hero = () => {
   const logoutHandler = async () => {
     try {
       await logoutApiCall().unwrap();
-      dispatch(logout);
+      dispatch(Logout);
       navigate('login');
     } catch (error) {
       toast.error(error?.data?.message || error.message);

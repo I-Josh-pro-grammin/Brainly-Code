@@ -14,13 +14,13 @@ const authSlice = createSlice({
       const expirationTime = new Date().getTime() + 24 * 30 * 60 * 60 * 1000;
       localStorage.setItem('expirationTime', expirationTime);
     },
-    Layout: state => {
+    Logout: state => {
       state.userInfo = null;
       localStorage.clear();
     }
   }
 })
 
-export const { setCredentials, logout } = authSlice.actions;
+export const { setCredentials, Logout } = authSlice.actions;
 
 export default authSlice.reducer;
