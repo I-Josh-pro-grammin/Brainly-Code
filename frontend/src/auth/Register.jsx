@@ -11,7 +11,7 @@ import Loader from '../Components/ui/Loader'
 
 const Register = () => {
 
-  // const [username, setUsername] = useState('');
+  const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -35,7 +35,7 @@ const Register = () => {
     e.preventDefault()
 
     try {
-      const res = await register({ email, password }).unwrap();
+      const res = await register({ username, email, password }).unwrap();
       console.log(res);
       dispatch(setCredentials({...res}));
       navigate(redirect);
@@ -56,7 +56,7 @@ const Register = () => {
            <p className="text-center text-sm">Start your coding journey with Brainly Code</p>
            <div className="rounded bg-opacity-40 text-gray-300 pb-1 mt-2   m-auto bg-[#13121C] items-center text-center w-[25%]">
                <form action="" onSubmit={submitHandler} className="items-center p-5">
-                <input type="text" required id="username" name="username" className="block w-full m-auto border-blue-300 text-gray-300 border-b-2  bg-transparent text-[1.2rem] p-2  focus:border-blue-700 focus:outline-none  " placeholder="Name" />
+                <input type="text" required id="username" onChange={e => setUsername(e.target.value)} name="username" className="block w-full m-auto border-blue-300 text-gray-300 border-b-2  bg-transparent text-[1.2rem] p-2  focus:border-blue-700 focus:outline-none  " placeholder="Name" />
                 <input type="email" onChange={e => setEmail(e.target.value)} required id="email" name="email" className="block mt-3 w-full m-auto border-blue-300 text-gray-300 border-b-2  bg-transparent text-[1.2rem] p-2  focus:border-blue-700 focus:outline-none focus:active:border-blue-400 " placeholder="Email" />
                 <input type="password" onChange={e => setPassword(e.target.value)} required id="password" name="password" className="block mb-5 mt-3 w-full m-auto border-blue-300 text-gray-300 border-b-2 bg-transparent text-[1.2rem] p-2  focus:border-blue-700 focus:outline-none focus:active:border-blue-400 " placeholder="Password" />
                 <input type="checkbox" name="terms" id="terms"  className="bg-[#13121C] mr-2 "/>

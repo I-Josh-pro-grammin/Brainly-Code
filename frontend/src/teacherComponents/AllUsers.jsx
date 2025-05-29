@@ -16,7 +16,7 @@ const AllUsers = () => {
   }
 
   return (
-     <div className="container mx-[9rem]">
+     <div className="container bg-[#06022bf1]">
       <div className="flex flex-col md:flex-row">
         <div className="py-3">
           <div className="m-auto text-center mb-5 xl font-bold h-12">
