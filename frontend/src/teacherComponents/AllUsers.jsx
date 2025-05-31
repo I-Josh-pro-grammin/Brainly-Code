@@ -9,15 +9,17 @@ const AllUsers = () => {
   const {data: users, isLoading, isError}=useGetUsersQuery()
   
   if(isLoading){
-    return <Loader />
+    return <div className=' w-screen h-screen m-0 bg-blue-950'>
+      <Loader />
+    </div>
   }
 
   if(isError){
-    return <div>Error loading products</div>
+    return <div className='w-screen h-screen bg-blue-950'>Error loading products</div>
   }
 
   return (
-     <div className="container w-[50rem] bg-[#06022bf1]">
+     <div className="container w-screen h-screen bg-[#06022bf1]">
       <div className="flex flex-col md:flex-row">
         <div className="py-3">
           <div className="m-auto text-center mb-5 xl font-bold h-12">

@@ -30,7 +30,7 @@ const TextGenerateEffect = ({
           return (
             <motion.span
               key={word + idx}
-              className="dark:text-white inline text-black opacity-0"
+              className="inline opacity-0"
               style={{
                 filter: filter ? "blur(10px)" : "none",
               }}>
@@ -46,7 +46,7 @@ const TextGenerateEffect = ({
     <div className={cn("font-thin inline", className)}>
       <div className="mt-4 inline">
         <div
-          className=" dark:text-white inline text-black leading-snug tracking-wide">
+          className=" inline leading-snug tracking-wide">
           {renderWords()}
         </div>
       </div>

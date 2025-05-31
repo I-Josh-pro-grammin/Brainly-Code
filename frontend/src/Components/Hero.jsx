@@ -1,37 +1,19 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import BrainlyCodeIcon from "./BrainlyCodeIcon";
 import { FloatingNav } from "./ui/FloatingNav";
 import Introductory from "./ui/Introductory";
 import TextGenerateEffect from "./ui/TextGenerate";
 // import Loader from "./ui/Loader";
-import { useLogoutMutation } from "../redux/api/userSlice";
-import { useDispatch } from "react-redux";
-import { toast } from "react-toastify";
-import { Logout } from "../redux/Features/authSlice";
 import { FaArrowRight } from "react-icons/fa";
 
 export const Hero = () => {
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-
   const navItems = [
     { name: "Home", link: "/", icon: "🏠" },
-    { name: "Courses", link: "/courses", icon: "📚" },
+    { name: "Courses", link: "/", icon: "📚" },
     { name: "Playground", link: "/playground", icon: "🎮" },
     { name: "Challenges", link: "/challenges", icon: "🏆" },
-    { name: "Users", link: "/admin/users", icon: "👤"}
+    { name: "Users", link: "/teacher/users", icon: "👤"}
   ];
-
-  const [ logoutApiCall ] = useLogoutMutation();
-  const logoutHandler = async () => {
-    try {
-      await logoutApiCall().unwrap();
-      dispatch(Logout());
-      navigate('/login');
-    } catch (error) {
-      toast.error(error?.data?.message || error.message);
-    }
-  }
 
   return (
     <div className="bg-[#070045] text-gray-50 p-7 w-full">
@@ -41,12 +23,12 @@ export const Hero = () => {
           <BrainlyCodeIcon className="ml-7"/>
           <ul className="ml-auto">
             <li className="font-semibold inline text-gray-300">
-                <Link to="/login">
-                  <button onClick={logoutHandler}>Logout</button>
+                <Link to="/welcome/login">
+                  <button>Login</button>
                 </Link>
             </li>
             <li className="font-semibold inline bg-gradient-to-r from-[#00ffff] rounded-md ml-5 to-purple-400 px-5 py-2 text-gray-300">
-              <Link to="/register">Signup</Link>
+              <Link to="/welcome/register">Signup</Link>
             </li>
           </ul>
         </header>
@@ -113,7 +95,7 @@ learn immediately.
         <div>
           <h1 className="text-2xl my-9 text-center  font-bold">Learning Paths</h1>
           <div className="flex">
-            <div className="grid-cols-3">
+            <div className="">
               <div className="rounded-md bg-gradient-to-r from-green-800 pt-2 pl- to-purple-950 w-[16rem] ml-[4rem] h-[10rem]">
                 <div className="rounded-full items-center bg-blue-900 mt-[2rem] w-[4rem] h-[4rem] ">
                   <p className="items-center font-bold text-lg">{"</>"}</p>
@@ -142,7 +124,7 @@ learn immediately.
                   </div>
               </div>
 
-              <div className="grid-cols-3">
+              <div className="">
               <div className="rounded-md bg-gradient-to-r from-green-800 pt-2 pl- to-purple-950 w-[16rem] ml-[4rem] h-[10rem]">
                 <div className="rounded-full items-center bg-blue-900 mt-[2rem] w-[4rem] h-[4rem] ">
                   <p className="items-center font-bold text-lg">{"</>"}</p>
@@ -171,7 +153,7 @@ learn immediately.
                   </div>
               </div>
 
-              <div className="grid-cols-3">
+              <div className="">
               <div className="rounded-md bg-gradient-to-r from-green-800 pt-2 pl- to-purple-950 w-[16rem] ml-[4rem] h-[10rem]">
                 <div className="rounded-full items-center bg-blue-900 mt-[2rem] w-[4rem] h-[4rem] ">
                   <p className="items-center font-bold text-lg">{"</>"}</p>
