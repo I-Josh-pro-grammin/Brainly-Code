@@ -11,11 +11,10 @@ import { FloatingNav } from './ui/FloatingNav';
 
 export default function HomePage() {
   const navItems = [
-    { name: "Home", link: "/", icon: "🏠" },
     { name: "Courses", link: "/", icon: "📚" },
     { name: "Playground", link: "/playground", icon: "🎮" },
     { name: "Challenges", link: "/challenges", icon: "🏆" },
-    { name: "Users", link: "/teacher/users", icon: "👤"}
+    { name: "Community", link: "/community", icon: "👤"}
   ];
 
   const dispatch = useDispatch();

@@ -56,14 +56,14 @@ const Register = () => {
            <p className="text-center text-sm">Start your coding journey with Brainly Code</p>
            <div className="rounded bg-opacity-40 text-gray-300 pb-1 mt-2   m-auto bg-[#13121C] items-center text-center w-[25%]">
                <form action="" onSubmit={submitHandler} className="items-center p-5">
-                <input type="text" required id="username" onChange={e => setUsername(e.target.value)} name="username" className="block w-full m-auto border-blue-300 text-gray-300 border-b-2  bg-transparent text-[1.2rem] p-2  focus:border-blue-700 focus:outline-none  " placeholder="Name" />
+                <input type="text" required id="username" onChange={e => setUsername(e.target.value)} name="username" className="block w-full m-auto border-blue-300 text-gray-300 border-b-2  bg-transparent text-[1.1rem] p-2  focus:border-blue-700 focus:outline-none  " placeholder="Name" />
                 <input type="email" onChange={e => setEmail(e.target.value)} required id="email" name="email" className="block mt-3 w-full m-auto border-blue-300 text-gray-300 border-b-2  bg-transparent text-[1.2rem] p-2  focus:border-blue-700 focus:outline-none focus:active:border-blue-400 " placeholder="Email" />
                 <input type="password" onChange={e => setPassword(e.target.value)} required id="password" name="password" className="block mb-5 mt-3 w-full m-auto border-blue-300 text-gray-300 border-b-2 bg-transparent text-[1.2rem] p-2  focus:border-blue-700 focus:outline-none focus:active:border-blue-400 " placeholder="Password" />
                 <div className=''>
                   <label for="teacher"><input className='mr-3 ' type="radio" name='role' id='teacher' value="TEACHER" onChange={e => setRole(e.target.value)} />Teacher</label>
                   <label for="student"><input className='ml-[4rem] mb-5 mr-3' type="radio" name='role' value="STUDENT" id='student' onChange={e => setRole(e.target.value)} />Student</label>
                 </div>
-                <input type="checkbox" name="terms" id="terms"  className="bg-[#13121C] mr-2 "/>
+                <input type="checkbox" name="terms" id="terms"  className="bg-[#13121C] mr-2 " style={{width: '1rem', height: '1rem', backgroundColor: "#13121C"}}/>
                 <label htmlFor="terms" className="text-xs">I agree the <span className="text-blue-400">Terms of service </span> and <span className="text-blue-400">Privacy Policy</span></label>
                 <button className="bg-blue-400 mt-2 px-8 rounded hover:bg-gradient-to-l hover:from-blue-700 hover:to-blue-500 bg-gradient-to-l from-blue-600 to-blue-400 py-2">Log into account</button>
                 <p>Or Continue with</p>
@@ -76,7 +76,7 @@ const Register = () => {
                 <FaFacebook className='inline mr-1'/>
                 Facebook
               </button>
-              <p className='my-4'>Already have an account? <Link to={'/login'} className='ml-3 text-blue-500' >Sign in</Link></p>
+              <p className='my-4'>Already have an account? <Link to={'/welcome/login'} className='ml-3 text-blue-500' >Sign in</Link></p>
            </div>
         </div>
       </header>

@@ -60,7 +60,7 @@ const PlayGround = () => {
             <TextGenerateEffect className={"font-bold text-[#00DEDE]"} words={"Playground"} />
             </h1>
             <p className="text-gray-400">
-              Experiment with code, test your ideas and learn by doing in our interactive 
+              Experiment with code, test your ideas and learn by doing in our interactive
               playground.
             </p>
         </div>
