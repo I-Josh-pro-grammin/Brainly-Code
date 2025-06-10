@@ -9,7 +9,7 @@ import TextGenerateEffect from './ui/TextGenerate';
 import { BackgroundGradientDemo } from './ui/BackGroundDemo';
 import { FloatingNav } from './ui/FloatingNav';
 import { BackgroundGradient } from './ui/BgGradient';
-import { FaAccessibleIcon, FaCss3, FaHtml5, FaJs, FaNode, FaPython, FaReact } from 'react-icons/fa';
+import { FaAccessibleIcon, FaCss3, FaHtml5, FaJs, FaNode, FaNodeJs, FaPython, FaReact } from 'react-icons/fa';
 
 export default function HomePage() {
   const navItems = [
@@ -87,8 +87,10 @@ export default function HomePage() {
                 height="400"
                 width="400"
                 className="object-contain" /> */}
-                <FaJs style={{color: "orange"}} size={30} />
-                <span className="text-[#00CED1] inline p-1 font-bold text-end">Begginer</span>
+                <div className='w-[100%] mb-4'>
+                  <FaJs style={{color: "orange", display: "inline" }} size={30}/>
+                  <span className="text-[#A241E9] p-1 ml-[11rem] font-bold text-end">Advanced</span>
+                </div>
 
               <h1 className="text-3xl font-bold text-neutral-300 dark:text-neutral-200">
                 JS Fundamentals
@@ -96,7 +98,7 @@ export default function HomePage() {
               <p className="text-gray-600">Learn the basics  of JavaScript programming 
                 with interactive exercises</p>
               <button
-                className="rounded-full bg-gradient-to-r from-[#00ffee] to-purple-500 pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
+                className="rounded-full bg-gradient-to-r from-[#00ffee] mx-auto to-purple-500 pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
                 <span className="px-5 text-xl py-3">Enroll now</span>
               </button>
             </BackgroundGradient>
@@ -109,8 +111,10 @@ export default function HomePage() {
                 height="400"
                 width="400"
                 className="object-contain" /> */};
-                <FaReact style={{color: "orange" }} size={30}/>
-                <span className="text-[#A241E9] inline p-1 font-bold text-end">Intermediate</span>
+                <div className='w-[100%] mb-4'>
+                  <FaReact style={{color: "blue", display: "inline" }} size={30}/>
+                  <span className="text-[#A241E9] p-1 ml-[10rem] font-bold text-end">Advanced</span>
+                </div>
 
               <h1 className="text-3xl font-bold text-neutral-300 dark:text-neutral-200">
                 React Development
@@ -118,7 +122,7 @@ export default function HomePage() {
               <p className="text-gray-600">Build modern  web applications with React and
                 its ecosystem. </p>
               <button
-                className="rounded-full bg-gradient-to-r from-[#00ffee] to-purple-500 pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
+                className="rounded-full bg-gradient-to-r from-[#00ffee] mx-auto to-purple-500 pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
                 <span className="px-5 text-xl py-3">Enroll now</span>
               </button>
             </BackgroundGradient>
@@ -131,8 +135,10 @@ export default function HomePage() {
                 height="400"
                 width="400"
                 className="object-contain" /> */};
-                <FaPython style={{color: "orange" }} size={30}/>
-                <span className="text-[#00CED1] inline p-1 font-bold text-end">Beginner</span>
+                <div className='w-[100%] mb-4'>
+                  <FaPython style={{color: "green", display: "inline" }} size={30}/>
+                  <span className="text-[#A241E9] p-1 ml-[10rem] font-bold text-end">Advanced</span>
+                </div>
 
               <h1 className="text-2xl font-bold text-neutral-300 dark:text-neutral-200">
                 Python for Beginners
@@ -141,7 +147,7 @@ export default function HomePage() {
                 programming language.
               </p>
               <button
-                className="rounded-full bg-gradient-to-r from-[#00ffee] to-purple-500 pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
+                className="rounded-full bg-gradient-to-r mx-auto from-[#00ffee] to-purple-500 pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
                 <span className="px-5 text-xl py-3">Enroll now</span>
               </button>
             </BackgroundGradient>
@@ -158,8 +164,10 @@ export default function HomePage() {
                 height="400"
                 width="400"
                 className="object-contain" /> */};
-                <FaNode style={{color: "orange" }} size={30}/>
-                <span className="text-[#31bf52] inline p-1 font-bold text-end">Advanced</span>
+                <div className='w-[100%] mb-4'>
+                  <FaNodeJs style={{color: "orange", display: "inline" }} size={30}/>
+                  <span className="text-[#A241E9] p-1 ml-[10rem] font-bold text-end">Advanced</span>
+                </div>
 
               <h1 className="text-2xl font-bold text-neutral-300 dark:text-neutral-200">
               Node.js
@@ -168,7 +176,7 @@ export default function HomePage() {
                 Node.js and Express.
               </p>
               <button
-                className="rounded-full bg-gradient-to-r from-[#00ffee] to-purple-500 pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
+                className="rounded-full bg-gradient-to-r mx-auto from-[#00ffee] to-purple-500 pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
                 <span className="px-5 text-xl py-3">Enroll now</span>
               </button>
             </BackgroundGradient>
@@ -181,8 +189,10 @@ export default function HomePage() {
                 height="400"
                 width="400"
                 className="object-contain" /> */};
-                <FaHtml5 style={{color: "orange" }} size={30}/>
-                <span className="text-[#00CED1] inline p-1 font-bold text-end">Beginner</span>
+                <div className='w-[100%] mb-4'>
+                  <FaHtml5 style={{color: "orange", display: "inline" }} size={30}/>
+                  <span className="text-[#A241E9] p-1 ml-[10rem] font-bold text-end">Advanced</span>
+                </div>
 
               <h1 className="text-2xl font-bold text-neutral-300 dark:text-neutral-200">
               HTML &CSS Mastery
@@ -191,7 +201,7 @@ export default function HomePage() {
                 programming language.
               </p>
               <button
-                className="rounded-full bg-gradient-to-r from-[#00ffee] to-purple-500 pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
+                className="rounded-full bg-gradient-to-r mx-auto from-[#00ffee] to-purple-500 pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
                 <span className="px-5 text-xl py-3">Enroll now</span>
               </button>
             </BackgroundGradient>
@@ -204,8 +214,10 @@ export default function HomePage() {
                 height="400"
                 width="400"
                 className="object-contain" /> */};
-                <FaAccessibleIcon style={{color: "orange" }} size={20}/>
-                <span className="text-[#A241E9] inline p-1 font-bold text-end">Advanced</span>
+                <div className='w-[100%] mb-4'>
+                  <FaAccessibleIcon style={{color: "orange", display: "inline" }} size={20}/>
+                  <span className="text-[#A241E9] p-1 ml-[12rem] font-bold text-end">Advanced</span>
+                </div>
 
               <h1 className="text-2xl font-bold text-neutral-300 dark:text-neutral-200">
                 Data Structures & Algorithm
@@ -214,7 +226,7 @@ export default function HomePage() {
                 programming language.
               </p>
               <button
-                className="rounded-full bg-gradient-to-r from-[#00ffee] to-purple-500 pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
+                className="rounded-full bg-gradient-to-r mx-auto from-[#00ffee] to-purple-500 pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
                 <span className="px-5 text-xl py-3">Enroll now</span>
               </button>
             </BackgroundGradient>

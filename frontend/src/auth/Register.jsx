@@ -61,7 +61,7 @@ const Register = () => {
                 <input type="password" onChange={e => setPassword(e.target.value)} required id="password" name="password" className="block mb-5 mt-3 w-full m-auto border-blue-300 text-gray-300 border-b-2 bg-transparent text-[1.2rem] p-2  focus:border-blue-700 focus:outline-none focus:active:border-blue-400 " placeholder="Password" />
                 <div className=''>
                   <label for="teacher"><input className='mr-3 ' type="radio" name='role' id='teacher' value="TEACHER" onChange={e => setRole(e.target.value)} />Teacher</label>
-                  <label for="student"><input className='ml-[4rem] mb-5 mr-3' type="radio" name='role' value="STUDENT" id='student' onChange={e => setRole(e.target.value)} />Student</label>
+                  <label for="student"><input className='ml-[4rem] mb-5 mr-3' type="radio" name='role' value="STUDENT" id='student' onChange={e => setRole(e.target.value)} />User</label>
                 </div>
                 <input type="checkbox" name="terms" id="terms"  className="bg-[#13121C] mr-2 " style={{width: '1rem', height: '1rem', backgroundColor: "#13121C"}}/>
                 <label htmlFor="terms" className="text-xs">I agree the <span className="text-blue-400">Terms of service </span> and <span className="text-blue-400">Privacy Policy</span></label>
