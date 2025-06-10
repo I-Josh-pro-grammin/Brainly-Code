@@ -7,9 +7,9 @@ import Register from './auth/Register'
 import store from './redux/store'
 import App from './App'
 import { Hero } from './Components/Hero'
-import TeacherRoutes from './TeacherRoutes'
-import Navbar from './teacherComponents/Navbar'
-import AllUsers from './teacherComponents/AllUsers'
+import AdminRoutes from './AdminRoutes'
+import Navbar from './Admin/Navbar'
+import AllUsers from './Admin/AllUsers'
 import UpdateUser from './Components/UpdateUser'
 import Home from './Home'
 import HomePage from './Components/HomePage'
@@ -28,7 +28,7 @@ const router = createBrowserRouter (
       </Route>
       
       {/* Admin  */}
-      <Route path='teacher' element={<TeacherRoutes />}>
+      <Route path='teacher' element={<AdminRoutes />}>
         <Route path='users' element={<AllUsers />} />
         <Route path='' element={<Navbar />} />
       </Route>

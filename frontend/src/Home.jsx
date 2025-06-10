@@ -9,7 +9,7 @@ const Home = () => {
 
   return (
     <div>
-      {userInfo ? <Outlet /> : <Navigate to="welcome/login" replace />} 
+      {userInfo && userInfo.role === 'STUDENT' ? <Outlet /> : <Navigate to="welcome/login" replace />} 
     </div>
   )
 }
